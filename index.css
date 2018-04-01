@@ -1,0 +1,27 @@
+#gmap_canvas {
+  overflow: hidden;
+  height: 40em;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: red;
+  font-family: Arial;
+  background-image: url('londoon.png');
+  background-position: center;
+  background-size: contain;
+  height: 10em;
+}
+
+h1 {
+  padding: 0.2em;
+}
+
+.content {
+  font-weight: bold;
+}

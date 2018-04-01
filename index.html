@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>London</title>
+    <link rel="shortcut icon" href="london.png">
+    <!-- <script type=“text/javascript’ src=“main.js”></script> -->
+  </head>
+  <body>
+    <header>
+      <h1>Our little London adventure</h1>
+    </header>
+      <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+      <div id="map">
+        <div id='gmap_canvas'>
+        </div>
+        <div>
+          <small>
+            <a href="embedgooglemaps.com/">https://embedgooglemaps.com/en/</a>
+          </small>
+        </div>
+        <div>
+          <small>
+            <a href=""></a>
+          </small>
+        </div>
+        <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+      </div>
+      <script>
+        function init_map(){
+          var myOptions = {
+            zoom:13,center:new google.maps.LatLng(51.5073509,-0.12775829999998223),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          map = new google.maps.Map(document.getElementById('gmap_canvas'),myOptions);
+          // map.addListener('click', function(e) {placeMarkerAndPanTo(e.latLng, map);})
+          var places = [
+            ['Tower Bridge', 51.505590, -0.075292, 'walk over the briiidge', "heart.png"],
+            ['Barmy Badger Backpackers', 51.493663, -0.1959569, 'Here we will spend our nights', "heart.png", 'Zzz'],
+            ['Houses of Parliament & Big Ben', 51.5009588, -0.1272687, 'We\'ll walk here from the Tower Bridge', "heart.png"]
+          ]
+
+          var marker = []
+
+          placeMarkers = (map) => {
+            for (var i = 0; i < places.length; i++) {
+              var place = places[i];
+              marker[i] = new google.maps.Marker({
+                position: { lat: place[1], lng: place[2] },
+                map: map,
+                icon: place[4],
+                title: place[0],
+                label: place[5]
+              })
+              var content= '<span class="content">'+place[0]+'</span>'+'<br>'+place[3]
+              setInfo(marker[i], content)
+            }
+          }
+          console.log(marker);
+
+          placeMarkers(map)
+
+          function setInfo(marker, message) {
+            var infowindow = new google.maps.InfoWindow({
+              content: message
+            });
+
+            google.maps.event.addListener(marker,'click', function() {
+              infowindow.open(map, marker);
+            });
+          }
+      }
+        google.maps.event.addDomListener(window, 'load', init_map);
+      </script>
+  </body>
+</html>
