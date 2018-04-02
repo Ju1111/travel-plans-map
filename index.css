@@ -1,6 +1,6 @@
 #gmap_canvas {
   overflow: hidden;
-  height: 40em;
+  height: calc(100vh - 10em);
   width: 100%;
 }
 
