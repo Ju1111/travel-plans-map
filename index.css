@@ -9,6 +9,12 @@
   width: 100%;
 }
 
+@media screen and (max-width: 800px) {
+  #legend {
+    display: none;
+  }
+}
+
 #legend {
         font-family: Arial, sans-serif;
         background: rgba(255, 255, 255, 0.65);
