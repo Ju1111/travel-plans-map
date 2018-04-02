@@ -14,14 +14,43 @@
       <div id='gmap_canvas'>
         <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
       </div>
+      <div id="legend"><h2>Legend</h2></div>
       <script>
         function init_map(){
           var myOptions = {
-            zoom:13,center:new google.maps.LatLng(51.5073509,-0.12775829999998223),
+            zoom:13,center:new google.maps.LatLng(51.514489, -0.114702),
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
           map = new google.maps.Map(document.getElementById('gmap_canvas'),myOptions);
           // map.addListener('click', function(e) {placeMarkerAndPanTo(e.latLng, map);})
+
+          var icons = {
+           important: {
+             name: 'Important places',
+             icon: 'heart.png'
+           },
+           sights: {
+             name: 'Typical Sights',
+             icon: 'heart_red.png'
+           },
+           noms: {
+             name: 'Bars & Foodplaces',
+             icon: 'heart_orange.png'
+           },
+           parks: {
+             name: 'Parks',
+             icon: 'heart_green.png'
+           },
+           memories: {
+             name: 'Memories',
+             icon: 'heart_blue.png'
+           },
+           ideas: {
+             name: 'Other interesting places',
+             icon: 'heart_purple.png'
+           }
+          };
+
           var places = [
             ['Tower Bridge', 51.505590, -0.075292, 'walk over the briiidge', "heart_red.png"],
             ['Barmy Badger Backpackers', 51.493663, -0.1959569, 'Here we will spend our nights', "heart.png", 'Zzz'],
@@ -57,7 +86,8 @@
             ['Hackney Downs Vegan market', 51.554652, -0.067133, 'Vegan street food. Saturday 11:00-17:00', "heart_orange.png", 'S'],
             ['Inamo Soho', 51.514438, -0.134711, 'Japanese restaurant with spacey tables', "heart_orange.png"],
             ['Luton Airport', 51.875788, -0.373936, 'We arrive here around 10', "heart.png", 'A'],
-            ['Stansted Airport', 51.889568, 0.262792, 'We depart from here at 19:20', "heart.png", 'A']
+            ['Stansted Airport', 51.889568, 0.262792, 'We depart from here at 19:20', "heart.png", 'A'],
+            ['Monument Tower', 51.510102, -0.086013, 'Climb 311 stairs for a lovely view. Open from 09:30 to 17:30. Admission: £4.50 for me, £3 for students.', "heart_purple.png"]
           ]
 
           var marker = []
@@ -89,7 +119,19 @@
               infowindow.open(map, marker);
             });
           }
-      }
+
+          var legend = document.getElementById('legend');
+          for (var key in icons) {
+            var type = icons[key];
+            var name = type.name;
+            var icon = type.icon;
+            var div = document.createElement('div');
+            div.innerHTML = '<img src="' + icon + '"> ' + name;
+            legend.appendChild(div);
+          }
+
+          map.controls[google.maps.ControlPosition.RIGHT].push(legend);
+        }
         google.maps.event.addDomListener(window, 'load', init_map);
       </script>
   </body>
