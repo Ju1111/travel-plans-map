@@ -23,9 +23,42 @@
           map = new google.maps.Map(document.getElementById('gmap_canvas'),myOptions);
           // map.addListener('click', function(e) {placeMarkerAndPanTo(e.latLng, map);})
           var places = [
-            ['Tower Bridge', 51.505590, -0.075292, 'walk over the briiidge', "heart.png"],
+            ['Tower Bridge', 51.505590, -0.075292, 'walk over the briiidge', "heart_red.png"],
             ['Barmy Badger Backpackers', 51.493663, -0.1959569, 'Here we will spend our nights', "heart.png", 'Zzz'],
-            ['Houses of Parliament & Big Ben', 51.5009588, -0.1272687, 'We\'ll walk here from the Tower Bridge', "heart.png"]
+            ['Houses of Parliament & Big Ben', 51.5009588, -0.1272687, 'We\'ll walk here from the Tower Bridge', "heart_red.png"],
+            ['The Dublin Castle', 51.537443, -0.145334, 'Punk Karaoke. Friday 19:30', "heart_orange.png", 'F'],
+            ['World of Tattoos', 51.5718554, -0.4144958, 'Antonys Tattooshop', "heart_blue.png", 'S'],
+            ['Old Spitalfields Market', 51.5196641, -0.0776322, 'Interesting market in an old victorian market hall.', "heart_blue.png"],
+            ['Shoreditch', 51.521929, -0.075471, 'Where Julia lived', "heart_blue.png"],
+            ['Waxy O\'Connors', 51.510805, -0.132402, 'Wonderful Irish Pub', "heart_blue.png"],
+            ['Camden Town', 51.541508, -0.145302, 'Well, Camden Town haha', "heart_blue.png"],
+            ['Hampstead Heath', 51.559432, -0.159539, 'Park with a lovely view on the city', "heart_blue.png"],
+            ['Carnaby Street', 51.513979, -0.139476, 'Basically just a street with shops. I just loved walking around in that area.', "heart_blue.png"],
+            ['The World\'s End Pub', 51.539120, -0.142384, 'Black Thorn Cider!!', "heart_orange.png"],
+            ['Victoria and Albert Museum', 51.496172, -0.173628, 'Interesting Museum', "heart_purple.png"],
+            ['Covent Garden', 51.511855, -0.123203, 'Market and interesting building. Often also street musicians. Very touristy though', "heart_blue.png"],
+            ['Highgate Cemetery', 51.566660, -0.146556, 'Very old cemetery. Always wanted to see it.', "heart_red.png"],
+            ['The British Museum', 51.518727, -0.125970, 'Must see museum!', "heart_red.png"],
+            ['St Dunstan-in-the-East', 51.509605, -0.082726, 'Small garden inside a church ruin', "heart_green.png"],
+            ['Shri Swaminarayan Mandir', 51.548073, -0.260353, 'Biggest hindu temple outside hindu countries', "heart_purple.png"],
+            ['Platform 9 3/4 at Kings Cross', 51.531948, -0.124918, 'It\'s for free, haha', "heart_purple.png"],
+            ['Tower of London', 51.5081124, -0.078138, 'Pretty to just walk by. If we want there is the ceremony of keys to watch for free', "heart_red.png"],
+            ['Hyde Park', 51.5072682, -0.167919, 'Most famous park in London. Not that spectacular though', "heart_green.png"],
+            ['Buckingham Palace', 51.501364, -0.1440787, 'The queens castle. We can watch the changing of the guards for free', "heart_red.png"],
+            ['Trafalgar Square', 51.50809, -0.1291379, 'Famous square', "heart_red.png"],
+            ['St. Paul\'s Cathedral', 51.513791, -0.098964, 'Famous church, inspired by Florence a bit', "heart_red.png"],
+            ['Picadilly Circus', 51.510041, -0.134804, 'Square with electronic billboards. We\'ll pass this anyway.', "heart_red.png"],
+            ['Westminster Abbey', 51.499776, -0.127252, 'Amazing gothic church. Way too expenisve to go in.', "heart_red.png"],
+            ['Camley Street National Park', 51.535593, -0.128362, 'Lovely small park hidden in the city', "heart_green.png"],
+            ['Natural History Museum', 51.496581, -0.173814, 'Very interesting and pretty building', "heart_purple.png"],
+            ['Crystal Palace Park', 51.421074, -0.072385, 'Park with dinosaurs haha', "heart_green.png"],
+            ['Vauxhall City Farm', 51.487528, -0.119327, 'Alpaccaaaaas!!', "heart_green.png"],
+            ['Science Museum', 51.497910, -0.174097, 'Scieeeeence XD', "heart_purple.png"],
+            ['Skygarden Bar', 51.511599, -0.083483, 'Bar on top of a skyscraper with a great view. 6£ per beer', "heart_orange.png"],
+            ['Hackney Downs Vegan market', 51.554652, -0.067133, 'Vegan street food. Saturday 11:00-17:00', "heart_orange.png"],
+            ['Inamo Soho', 51.514438, -0.134711, 'Japanese restaurant with spacey tables', "heart_orange.png"],
+            ['Luton Airport', 51.875788, -0.373936, 'We arrive here around 10', "heart.png", 'A'],
+            ['Stansted Airport', 51.889568, 0.262792, 'We depart from here at 19:20', "heart.png", 'A']
           ]
 
           var marker = []

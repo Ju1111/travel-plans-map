@@ -10,7 +10,7 @@
 }
 
 header {
-  color: red;
+  color: #cc0000;
   font-family: Arial;
   background-image: url('londoon.png');
   background-position: center;
@@ -24,4 +24,6 @@ h1 {
 
 .content {
   font-weight: bold;
+  font-size: 1.2em;
+  color: #cc0000;
 }
