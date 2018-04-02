@@ -5,7 +5,7 @@
 
 #gmap_canvas {
   overflow: hidden;
-  height: calc(100vh - 10em);
+  height: calc(100vh - 6.5em);
   width: 100%;
 }
 
@@ -34,10 +34,11 @@
 header {
   color: #cc0000;
   font-family: Arial;
+  font-size: 0.8em;
   background-image: url('londoon.png');
   background-position: center;
   background-size: contain;
-  height: 10em;
+  height: 8em;
 }
 
 h1 {
