@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>London</title>
     <link rel="shortcut icon" href="london.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
@@ -14,7 +15,7 @@
       <div id='gmap_canvas'>
         <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
       </div>
-      <div id="legend"><h2>Legend</h2></div>
+      <div id="legend"></div>
       <script>
         function init_map(){
           var myOptions = {
@@ -26,7 +27,7 @@
 
           var icons = {
            important: {
-             name: 'Important places',
+             name: 'Important',
              icon: 'heart.png'
            },
            sights: {
@@ -34,7 +35,7 @@
              icon: 'heart_red.png'
            },
            noms: {
-             name: 'Bars & Foodplaces',
+             name: 'Bars & Noms',
              icon: 'heart_orange.png'
            },
            parks: {
@@ -46,7 +47,7 @@
              icon: 'heart_blue.png'
            },
            ideas: {
-             name: 'Other interesting places',
+             name: 'Other',
              icon: 'heart_purple.png'
            }
           };
